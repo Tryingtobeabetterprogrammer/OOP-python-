@@ -1,0 +1,12 @@
+class father():
+    def sleep(self):
+        print('sleep at 11 pm to 10pm')
+
+    def eat(self):
+        print('eats at 8pm to 10 pm')
+
+class child(father):#it just re writing the child class using parent class
+    print('sleeps at 2pm to 12pm')
+
+ram=child()
+ram.sleep()
