@@ -1,0 +1,21 @@
+class character():#this is parent class
+    def __init__(self,health,damage,speed):
+        self.health=health
+        self.damage=damage#like think this parnet class is a side character
+        self.speed=speed#therefore the child take less damage then parent class
+    def take_damage(self,amount):
+        self.health-=amount
+
+class warrior(character):#this is child which is been inherented by parent class
+    def __init__(self,health,damage,speed):
+        super().__init__(health,damage,speed)
+        self.toughness_madoifier=0.90#the main reason of using child class is to create a copy of parent classs but adding more specific details
+
+    def take_damage(self,amount):
+        modified_damage=amount*self.toughness_madoifier#and this child class is a main caracter
+        super().take_damage(modified_damage)
+
+w=warrior(100,60,10)
+print(f'initial health:',w.health)
+w.take_damage(12)
+print(f'after the damage:',w.health)
