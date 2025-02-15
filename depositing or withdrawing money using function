@@ -1,0 +1,48 @@
+class Bank():
+    def __init__(self,name,balance):
+        self.name=name
+        self.__balance=balance
+
+    def deposit(self,amount):
+            if 0<amount:
+                self.__balance +=amount
+                self.__show_balance()
+                print("Amount deposited successfully")
+
+            else:
+                print('invalid')
+        
+
+    def withdraw(self,amount):
+            if 0<amount:
+                if amount<=self.__balance:
+                    self.__balance-=amount
+                    self.__show_balance()
+                    print("Amount withdrawn successfully")
+
+                else:
+                    print("Insufficient balance")
+            
+            else:
+                print('invalide')
+
+    def __show_balance(self):
+        print('your name:',self.name)
+        print("The balance is:",self.__balance)
+
+name=input("Enter the name:")
+intial_amount=int(input("Enter the intial amount:"))
+account=Bank(name,intial_amount)
+
+while True:
+    a=input('deposit or withdraw:')
+    if a=='deposit':
+        amount=int(input('enter the amount:'))
+        account.deposit(amount)
+    elif a=='withdraw':
+        amount=int(input('enter your amount:'))
+        account.withdraw(amount)
+    elif a=='exit':
+        break
+    else:
+        print('invalid')
