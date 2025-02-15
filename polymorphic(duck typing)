@@ -1,0 +1,28 @@
+class duck():
+    def swin(self):
+        print('i can swin')
+    def talk(self):
+        print('wak wak')
+
+class dog():
+    def swin(self):
+        print('i can swim')
+    def  talk(self):
+        print('woof woof')
+
+def display(self):
+    self.swin()
+    self.talk()
+
+class person():
+    def talk(self):
+        print('bullshit')
+
+b=dog()
+display(b)
+
+c=duck()
+display(c)
+
+d=person()
+display(d)
