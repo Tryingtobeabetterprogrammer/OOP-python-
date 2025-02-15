@@ -1,0 +1,11 @@
+class fun():
+    def add(self,*args):
+        total=0
+        for i in args:
+            total=total + i
+        return total
+d=fun()
+print(d.add(2,3))
+print(d.add(2,3,2,1,4,4,5))
+print(d.add(2,312123213123123))
+    
