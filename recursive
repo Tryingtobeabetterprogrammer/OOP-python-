@@ -1,0 +1,8 @@
+def add(n):
+    #base
+    if n==1:
+        return 1
+    #recursion
+    return n+add(n-1)
+a=add(5)
+print(a)
