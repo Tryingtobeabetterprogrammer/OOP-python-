@@ -1,0 +1,9 @@
+def f():
+    n=1
+    while n<=10:
+        if n%2==0:
+            yield n
+        n+=1
+a=f()
+for i in a:
+    print(i)
